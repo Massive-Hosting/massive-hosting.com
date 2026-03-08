@@ -1,0 +1,66 @@
+---
+const resources = [
+  { name: "hosting_webapp", description: "Web application", crud: "CRUD" },
+  { name: "hosting_webapp_env_vars", description: "Environment variables", crud: "CRU" },
+  { name: "hosting_webapp_daemon", description: "Daemon process", crud: "CRUD" },
+  { name: "hosting_webapp_cron_job", description: "Cron job", crud: "CRUD" },
+  { name: "hosting_database", description: "MySQL database", crud: "CRD" },
+  { name: "hosting_database_user", description: "Database user", crud: "CRUD" },
+  { name: "hosting_valkey", description: "Valkey (Redis) instance", crud: "CRD" },
+  { name: "hosting_valkey_user", description: "Valkey user", crud: "CRUD" },
+  { name: "hosting_fqdn", description: "Custom domain", crud: "CRUD" },
+  { name: "hosting_dns_zone", description: "DNS zone", crud: "RUD" },
+  { name: "hosting_dns_record", description: "DNS record", crud: "CRUD" },
+  { name: "hosting_s3_bucket", description: "S3 bucket", crud: "CRUD" },
+  { name: "hosting_s3_access_key", description: "S3 access key", crud: "CRD" },
+  { name: "hosting_email_account", description: "Email account", crud: "CRD" },
+  { name: "hosting_email_alias", description: "Email alias", crud: "CRD" },
+  { name: "hosting_email_forward", description: "Email forward", crud: "CRD" },
+  { name: "hosting_container", description: "OCI container", crud: "CRUD" },
+  { name: "hosting_container_env_vars", description: "Container env vars", crud: "CRU" },
+  { name: "hosting_wireguard_peer", description: "WireGuard peer", crud: "CRD" },
+  { name: "hosting_ssh_key", description: "SSH key", crud: "CD" },
+  { name: "hosting_egress_rule", description: "Egress rule", crud: "CD" },
+];
+---
+
+<section id="resources" class="relative py-24 border-t border-gray-800/50">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Terraform Resources</h2>
+      <p class="text-lg text-gray-400">
+        21 resource types covering the full hosting stack.
+      </p>
+    </div>
+
+    <div class="rounded-2xl border border-gray-800 bg-surface-2 overflow-hidden">
+      <div class="grid grid-cols-[1fr_1fr_80px] gap-4 px-6 py-3 border-b border-gray-800 text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <span>Resource</span>
+        <span>Description</span>
+        <span class="text-center">CRUD</span>
+      </div>
+      {resources.map((r, i) => (
+        <a
+          href={`https://github.com/Massive-Hosting/terraform-provider-hosting/blob/main/docs/resources/${r.name.replace('hosting_', '')}.md`}
+          class:list={[
+            "grid grid-cols-[1fr_1fr_80px] gap-4 px-6 py-3 items-center hover:bg-surface-3 transition-colors group",
+            i < resources.length - 1 && "border-b border-gray-800/50"
+          ]}
+        >
+          <span class="font-mono text-sm text-brand-400 group-hover:text-brand-300 transition-colors">{r.name}</span>
+          <span class="text-sm text-gray-400">{r.description}</span>
+          <span class="text-center">
+            <span class="inline-flex items-center rounded-md bg-surface-3 px-2 py-0.5 text-xs font-mono text-gray-400">
+              {r.crud}
+            </span>
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <p class="mt-4 text-center text-sm text-gray-500">
+      All resources with an ID support <code class="text-gray-400">terraform import</code>.
+      <a href="https://github.com/Massive-Hosting/terraform-provider-hosting/tree/main/docs" class="text-brand-400 hover:text-brand-300 ml-1">Full documentation &rarr;</a>
+    </p>
+  </div>
+</section>
