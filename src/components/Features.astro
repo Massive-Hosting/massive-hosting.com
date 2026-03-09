@@ -63,7 +63,7 @@ const features = [
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />`,
     title: "Load Balancing",
-    description: "HAProxy with runtime map updates — no reload needed for domain changes. Consistent hashing on Host header within shards for predictable routing. DDoS mitigation with per-IP rate limiting and slow-loris protection."
+    description: "HAProxy with HTTP/2 and HTTP/3 (QUIC), runtime map updates — no reload needed for domain changes. Consistent hashing on Host header within shards for predictable routing. DDoS mitigation with per-IP rate limiting and slow-loris protection."
   },
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />`,
@@ -130,6 +130,11 @@ const features = [
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.384 3.175A1.243 1.243 0 014.75 17.2V6.8a1.243 1.243 0 011.286-1.145l5.384 3.175m0 0l5.384-3.175A1.243 1.243 0 0118.09 6.8v10.4a1.243 1.243 0 01-1.286 1.145L11.42 15.17zm0 0V8.83M9 12h6" />`,
     title: "AI Self-Healing",
     description: "AI agents continuously monitor and automatically resolve infrastructure issues. Gap analysis identifies patterns agents can't fix yet, feeding into built-in reporting and improvement loops."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />`,
+    title: "Site Migration",
+    description: "Pull files from your old hosting provider via SFTP. Connect to any remote server, browse and select files, and transfer them directly into your webapp with real-time progress tracking."
   },
 ];
 ---
