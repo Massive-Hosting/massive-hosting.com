@@ -1,43 +1,46 @@
-# Astro Starter Kit: Minimal
+# Massive Hosting
+
+**Modern Hosting, From Scratch**
+
+A research hosting platform exploring how modern mass hosting should work. Multi-tenant isolation, automated provisioning, and a complete API — with a Terraform provider on top.
+
+This repository contains the source code for [massive-hosting.com](https://massive-hosting.com), the landing page and documentation hub for the platform.
+
+## Platform Features
+
+- **Web Applications** — PHP, Node.js, Python, Ruby, and static sites
+- **Databases** — MySQL and Valkey (Redis-compatible)
+- **Object Storage** — S3-compatible
+- **OCI Containers** — Run container images directly
+- **Email** — JMAP and IMAP support
+- **VPN** — WireGuard access to your infrastructure
+- **Terraform Provider** — 21 resource types for infrastructure as code
+- **CI/CD** — GitHub Actions and GitLab CI templates, push-to-deploy
+- **Observability** — Centralized logging with Loki and Grafana dashboards
+- **Tenant Isolation** — Chroot jails, per-tenant ULA IPv6, TOTP 2FA
+- **MCP Server** — AI-assisted infrastructure management
+
+## Tech Stack
+
+- [Astro](https://astro.build) — Static site generator
+- [Tailwind CSS](https://tailwindcss.com) — Styling
+- [Cloudflare Pages](https://pages.cloudflare.com) — Hosting and deployment
+
+## Development
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install          # Install dependencies
+npm run dev          # Start dev server at localhost:4321
+npm run build        # Build for production to ./dist/
+npm run preview      # Preview the production build locally
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
+Pushes to `main` are automatically deployed to Cloudflare Pages via GitHub Actions.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Links
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [Documentation](https://docs.massive-hosting.com)
+- [Terraform Provider](https://registry.terraform.io/providers/massive-hosting/hosting)
+- [GitHub Organization](https://github.com/Massive-Hosting)
