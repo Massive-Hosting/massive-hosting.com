@@ -44,7 +44,7 @@ const resources = [
       </div>
       {resources.map((r, i) => (
         <a
-          href={`https://github.com/Massive-Hosting/terraform-provider-hosting/blob/main/docs/resources/${r.name.replace('hosting_', '')}.md`}
+          href={`https://registry.terraform.io/providers/Massive-Hosting/hosting/latest/docs/resources/${r.name.replace('hosting_', '')}`}
           class:list={[
             "grid grid-cols-[1fr_1fr_80px] gap-4 px-6 py-3 items-center hover:bg-surface-3 transition-colors group",
             i < resources.length - 1 && "border-b border-gray-800/50"
@@ -63,7 +63,7 @@ const resources = [
 
     <p class="mt-4 text-center text-sm text-gray-500">
       All resources with an ID support <code class="text-gray-400">terraform import</code>.
-      <a href="https://github.com/Massive-Hosting/terraform-provider-hosting/tree/main/docs" class="text-brand-400 hover:text-brand-300 ml-1">Full documentation &rarr;</a>
+      <a href="https://registry.terraform.io/providers/Massive-Hosting/hosting/latest/docs" class="text-brand-400 hover:text-brand-300 ml-1">Full documentation &rarr;</a>
     </p>
   </div>
 </section>
