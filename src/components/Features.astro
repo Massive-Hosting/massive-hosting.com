@@ -8,7 +8,7 @@ const features = [
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />`,
     title: "MySQL & Valkey",
-    description: "Managed MySQL databases with per-user privileges and GTID replication. Valkey (Redis-compatible) instances with ACL-based access control, configurable memory and eviction policies. Built-in data explorer for browsing keys and values."
+    description: "Managed MySQL databases with per-user privileges, inline password reset, and GTID replication. Valkey (Redis-compatible) instances with ACL-based access control, configurable memory limits, and a built-in data explorer with key browser, add/delete keys, type-aware value viewer, and interactive command console."
   },
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 17.25v-.228a4.5 4.5 0 00-.12-1.03l-2.268-9.64a3.375 3.375 0 00-3.285-2.602H7.923a3.375 3.375 0 00-3.285 2.602l-2.268 9.64a4.5 4.5 0 00-.12 1.03v.228m19.5 0a3 3 0 01-3 3H5.25a3 3 0 01-3-3m19.5 0a3 3 0 00-3-3H5.25a3 3 0 00-3 3m16.5 0h.008v.008h-.008v-.008zm-3 0h.008v.008h-.008v-.008z" />`,
@@ -18,12 +18,23 @@ const features = [
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />`,
     title: "Automatic DNS",
-    description: "DNS records provisioned automatically when you add domains, enable email, or configure SSL. Bring your own zones or use our nameservers. Full record editor and zone history in the control panel."
+    description: "DNS records provisioned automatically when you add domains, enable email, or configure SSL. Bring your own zones or use our nameservers. Full record editor, zone history with record promotion, and BIND zone file import/export in the control panel."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v7.5m2.25-6.466a9.016 9.016 0 00-3.461-.203M11.25 2.25H6.375c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />`,
+    title: "Domain Registration",
+    description: "Register, transfer, and manage domains through integrated registrar APIs. Multi-step registration wizard adapts per TLD with NIS2-compliant contact verification, DNSSEC, WHOIS privacy, and auto-renewal. Visual TLD flow editor for operators."
   },
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />`,
     title: "Email",
-    description: "Full email hosting with JMAP and IMAP support. Aliases, forwarding rules, vacation auto-replies, and per-domain accounts with auto-provisioned MX, SPF, DKIM, and DMARC records."
+    description: "Full email hosting with JMAP and IMAP support powered by Stalwart. Aliases, forwarding rules with keep-copy toggle, vacation auto-replies with date picker, and per-domain accounts with auto-provisioned MX, SPF, DKIM, and DMARC records. Integrated webmail client."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859M12 3v8.25m0 0l-3-3m3 3l3-3" />`,
+    title: "Webmail",
+    description: "Modern webmail client with conversations, calendar, contacts, and full-text search. Auto-provisioned address books and calendars with clean default names. Dark theme with responsive design.",
+    link: "https://massive-hosting.github.io/massive-mail-showcase/"
   },
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />`,
@@ -58,7 +69,7 @@ const features = [
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />`,
     title: "File Manager",
-    description: "Browser-based file manager with SFTP backend: browse, upload, download, edit, rename, and delete files. Integrated web terminal with arbitrary working directory."
+    description: "Browser-based file manager with SFTP backend: browse, upload, download, edit with Monaco editor, rename, and delete files. Symlink support, keyboard navigation with type-to-search, and persistent dock terminal that follows between pages."
   },
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />`,
@@ -73,7 +84,7 @@ const features = [
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />`,
     title: "Control Panel",
-    description: "Full-featured web UI with built-in SSH terminal, real-time log streaming, push-to-deploy, inline resource management, multi-language support, and data explorers for S3, Valkey, and DNS."
+    description: "Full-featured web UI with light/dark mode, persistent dock terminal, real-time WebSocket updates, built-in SSH terminal, log streaming, push-to-deploy, inline resource management, draggable dialogs, keyboard navigation, and multi-language support (English, German, Norwegian)."
   },
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />`,
@@ -88,7 +99,7 @@ const features = [
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />`,
     title: "Audit Logging",
-    description: "Every API mutation logged with full request/response bodies, API key attribution, and credential sanitization. Queryable by brand, user, and time range."
+    description: "Every API mutation logged with full request/response bodies, API key attribution, and credential sanitization. Domain registry audit trail with comprehensive filtering, statistics, CSV export, and NIS2 compliance reporting. Queryable by brand, user, resource, and time range."
   },
   {
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />`,
